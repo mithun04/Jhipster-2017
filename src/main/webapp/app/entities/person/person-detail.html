@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span>Person</span> {{vm.person.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Name</span></dt>
+        <dd>
+            <span>{{vm.person.name}}</span>
+        </dd>
+        <dt><span>Age</span></dt>
+        <dd>
+            <span>{{vm.person.age}}</span>
+        </dd>
+        <dt><span data-translate="testApp.person.email_id">Email Id</span></dt>
+        <dd>
+            <span>{{vm.person.email_id}}</span>
+        </dd>
+        <dt><span data-translate="testApp.person.phone_number">Phone Number</span></dt>
+        <dd>
+            <span>{{vm.person.phone_number}}</span>
+        </dd>
+        <dt><span>Address</span></dt>
+        <dd>
+            <span>{{vm.person.address}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="person-detail.edit({id:vm.person.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>
